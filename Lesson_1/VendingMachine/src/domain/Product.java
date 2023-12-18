@@ -19,7 +19,7 @@ public class Product {
 
     @Override
     public String toString (){
-        return "product " + "name= " + this.name + "; place= " + this.place + "; price= " + this.price + "; type= " + this.type + ";"; 
+        return "product " + "name= " + this.name + "; place= " + this.place + "; price= " + this.price + "; type= " + this.type + ";";
     }
 
 
