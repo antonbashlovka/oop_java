@@ -44,6 +44,16 @@ public class SpecialClient extends Actor{
         super.name = str;
     }
 
+    @Override
+    public boolean isReturnOrder() {
+        return super.isReturnOrder;
+    }
+
+    @Override
+    public void setReturnOrder(boolean val) {
+        super.isReturnOrder = val;
+    }
+
 
     
 

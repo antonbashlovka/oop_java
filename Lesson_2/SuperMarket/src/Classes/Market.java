@@ -6,6 +6,7 @@ import java.util.List;
 import Interfaces.iActorBehavior;
 import Interfaces.iMarketBehavior;
 import Interfaces.iQueuebehavior;
+import Interfaces.iReturnOrder;
 
 public class Market implements iMarketBehavior,iQueuebehavior {
 
@@ -40,6 +41,7 @@ public class Market implements iMarketBehavior,iQueuebehavior {
     public void update() {
         takeOrder();
         giveOrder();
+        returnOrder();
         releaseFromQueue();
     }
 
@@ -71,6 +73,18 @@ public class Market implements iMarketBehavior,iQueuebehavior {
             if (!actor.isMakeOrder()) {
                 actor.setMakeOrder(true);
                 System.out.println(actor.getName() + " клиент сделал заказ ");
+
+            }
+        }
+
+    }
+
+    @Override
+    public void returnOrder() {
+        for (Actor actor : queue) {
+            if (!actor.isReturnOrder()) {
+                actor.setReturnOrder(true);
+                System.out.println(actor.getName() + " клиент вернул заказ ");
 
             }
         }

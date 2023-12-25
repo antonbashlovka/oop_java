@@ -17,6 +17,11 @@ public class OrdinaryClient extends Actor{
     }
 
     @Override
+    public boolean isReturnOrder() {
+        return super.isReturnOrder;
+    }
+
+    @Override
     public void setTakeOrder(boolean val) {
         super.isTakeOrder = val;
     }
@@ -24,6 +29,11 @@ public class OrdinaryClient extends Actor{
     @Override
     public void setMakeOrder(boolean val) {
         super.isMakeOrder = val;
+    }
+
+    @Override
+    public void setReturnOrder(boolean val) {
+        super.isReturnOrder = val;
     }
 
     @Override
@@ -40,5 +50,9 @@ public class OrdinaryClient extends Actor{
     void setName(String str) {
         super.name = str;
     }
+
+
+
+
     
 }

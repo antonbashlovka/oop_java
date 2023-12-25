@@ -7,4 +7,5 @@ public interface iQueuebehavior {
     public void releaseFromQueue();
     public void takeOrder ();
     public void giveOrder ();
+    public void returnOrder ();
 }

@@ -14,12 +14,13 @@ public class App {
         Actor client4 = new ActionClient("Vasya", 1, "NewYear");
         Actor client5 = new ActionClient("Oksana", 2, "NewYear");
 
-        
+
 
         magnit.acceptToMarket(client1);
         magnit.acceptToMarket(client2);
         magnit.acceptToMarket(client3);
         magnit.acceptToMarket(client4);
+        magnit.acceptToMarket(client5);
 
         magnit.update();
 
