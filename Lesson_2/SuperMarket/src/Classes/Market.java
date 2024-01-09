@@ -12,6 +12,9 @@ public class Market implements iMarketBehavior,iQueuebehavior {
 
     private List<Actor> queue;
 
+    /**
+     * 
+     */
     public Market() {
         this.queue = new ArrayList<Actor>();
     }
