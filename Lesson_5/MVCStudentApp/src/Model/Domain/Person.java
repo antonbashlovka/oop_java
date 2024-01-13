@@ -1,13 +1,15 @@
 package Model.Domain;
 
-public abstract class Person {
+public class Person {
+
     private String name;
     private int age;
-    
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
 
     public String getName() {
         return name;
@@ -25,9 +27,9 @@ public abstract class Person {
         this.age = age;
     }
 
+
     @Override
     public String toString() {
-        return "Person [name=" + name + ", age=" + age + "]";
+        return "Person" + " name: " + this.name + ", age: " + this.age;
     }
-    
 }
