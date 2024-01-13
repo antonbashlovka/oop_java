@@ -2,6 +2,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 import Controller.ControllerClass;
+import Controller.Interfaces.iGetModel;
+import Controller.Interfaces.iGetView;
 import Model.ModelClass;
 import Model.Domain.Student;
 import View.ViewClass;
@@ -22,13 +24,12 @@ public class App {
         studList.add(student4);
 
 
-        ModelClass model = new ModelClass(studList);
-        ViewClass view = new ViewClass();
+        iGetModel model = new ModelClass(studList);
+        iGetView view = new ViewClass();
 
         ControllerClass controller = new ControllerClass(model, view);
 
         controller.update();
-
 
     }
 }
