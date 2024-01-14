@@ -36,10 +36,9 @@ public class App {
         iGetModel model = new ModelClass(studlList);
         iGetView view = new ViewClass();
         ControllerClass controller = new ControllerClass(model, view);
+        //controller.update();
 
-
-
-        controller.update();
+        controller.run();
 
     }
 }
