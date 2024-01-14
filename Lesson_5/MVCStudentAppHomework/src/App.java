@@ -6,6 +6,7 @@ import Controller.ControllerClass;
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
 import View.ViewClass;
+import View.ViewClassEng;
 import Model.ModelClass;
 import Model.Domain.Student;
 
@@ -34,7 +35,7 @@ public class App {
 
         //с интерфейсами
         iGetModel model = new ModelClass(studlList);
-        iGetView view = new ViewClass();
+        iGetView view = new ViewClassEng();
         ControllerClass controller = new ControllerClass(model, view);
         //controller.update();
 
