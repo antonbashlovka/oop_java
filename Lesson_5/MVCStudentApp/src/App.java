@@ -5,6 +5,7 @@ import Controller.ControllerClass;
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
 import Model.ModelClass;
+import Model.ModelClassFile;
 import Model.Domain.Student;
 import View.ViewClass;
 
@@ -24,10 +25,13 @@ public class App {
         studList.add(student4);
 
 
-        iGetModel model = new ModelClass(studList);
+        iGetModel modelFile = new ModelClassFile("StudentDB.csv");
+        //modelFile.saveAllStudentToFile(studList);
+
+        //iGetModel model = new ModelClass(studList);
         iGetView view = new ViewClass();
 
-        ControllerClass controller = new ControllerClass(model, view);
+       ControllerClass controller = new ControllerClass(modelFile, view);
 
         controller.update();
 
