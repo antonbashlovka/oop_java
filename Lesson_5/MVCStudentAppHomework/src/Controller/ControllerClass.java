@@ -1,6 +1,10 @@
 package Controller;
 
 import java.util.List;
+
+import Controller.Interfaces.iGetModel;
+import Controller.Interfaces.iGetView;
+
 import java.util.ArrayList;
 
 import Model.ModelClass;
@@ -9,12 +13,12 @@ import View.ViewClass;
 
 public class ControllerClass {
 
-    private ModelClass model;
-    private ViewClass view;
+    private iGetModel model;
+    private iGetView view;
 
     private List<Student> bufferData = new ArrayList<>();
 
-    public ControllerClass(ModelClass model, ViewClass view){
+    public ControllerClass(iGetModel model, iGetView view){
         this.model = model;
         this.view = view;
     }

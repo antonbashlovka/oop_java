@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 
 import Controller.ControllerClass;
+import Controller.Interfaces.iGetModel;
+import Controller.Interfaces.iGetView;
 import View.ViewClass;
 import Model.ModelClass;
 import Model.Domain.Student;
@@ -23,15 +25,21 @@ public class App {
         studlList.add(student4);
         studlList.add(student5);
 
-        ModelClass model = new ModelClass(studlList);
-        ViewClass view = new ViewClass();
-        ControllerClass controller = new ControllerClass(model, view);
         
+        //Без интерфейсов
+        //ModelClass model = new ModelClass(studlList);
+        //ViewClass view = new ViewClass();
+        //ControllerClass controller = new ControllerClass(model, view);
+        //controller.update();
+
+        //с интерфейсами
+        iGetModel model = new ModelClass(studlList);
+        iGetView view = new ViewClass();
+        ControllerClass controller = new ControllerClass(model, view);
+
+
+
         controller.update();
-
-
-
-
 
     }
 }

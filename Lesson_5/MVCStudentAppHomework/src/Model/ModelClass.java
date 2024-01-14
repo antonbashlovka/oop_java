@@ -2,9 +2,10 @@ package Model;
 
 import java.util.List;
 
+import Controller.Interfaces.iGetModel;
 import Model.Domain.Student;
 
-public class ModelClass {
+public class ModelClass implements iGetModel{
     private List<Student> students;
 
     /**
