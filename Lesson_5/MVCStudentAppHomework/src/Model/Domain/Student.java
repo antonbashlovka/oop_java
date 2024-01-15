@@ -7,6 +7,11 @@ public class Student extends Person implements Comparable<Student>{
 
     private static int generalId;
 
+    /**
+     * Конструктор студентов
+     * @param name
+     * @param age
+     */
     public Student(String name, int age) {
         super(name, age);
         this.id = generalId;

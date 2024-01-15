@@ -17,15 +17,28 @@ public class ControllerClass {
 
     private List<Student> bufferData = new ArrayList<>();
 
+    /**
+     * Конструктор класса ControllerClass
+     * @param model
+     * @param view
+     */
     public ControllerClass(iGetModel model, iGetView view){
         this.model = model;
         this.view = view;
     }
 
+    /**
+     * Тест списка студентов - проверяет пустой ли список
+     * @param stud
+     * @return boolean
+     */
     private boolean testData(List<Student> stud){
         return (stud.size() > 0) ? true : false;
     }
     
+    /**
+     * Проверяет список студентов с помощью testData() на пустоту, вызывает на печать список с помошью view.printAllStudents()
+     */
     public void update(){
 
         this.bufferData = model.getStudents();
@@ -41,6 +54,12 @@ public class ControllerClass {
     }
 
 
+    /**
+     * Осуществляет диалог с пользователем - запрашивает команду. 
+     * В случае команды DELETE запрашивает номер студента из списка на удаление
+     * В случае если команды нет в списке - выход из программы в блоке catch
+     * @throws Exception
+     */
     public void run() throws Exception 
     {
         
