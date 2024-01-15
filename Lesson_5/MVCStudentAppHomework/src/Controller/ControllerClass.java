@@ -7,9 +7,8 @@ import Controller.Interfaces.iGetView;
 
 import java.util.ArrayList;
 
-import Model.ModelClass;
 import Model.Domain.Student;
-import View.ViewClass;
+
 
 public class ControllerClass {
 
@@ -42,25 +41,60 @@ public class ControllerClass {
     }
 
 
-    public void run()
+    public void run() throws Exception 
     {
+        
         Command com = (Command)Command.NONE;
         boolean getNewIter = true;
+
         while(getNewIter)
         {
+            this.bufferData = model.getStudents();
             String command = view.prompt("Введите команду:");
-            com = Command.valueOf(command.toUpperCase());
-            switch(com)
-            {
-                case EXIT:
-                   getNewIter = false;
-                   System.out.println("Выход из программы");
-                   break;
-                case LIST:
-                   view.printAllStudents(model.getStudents());
-                   break;
+            String prevCommand = "";
+            try {
+                    com = Command.valueOf(command.toUpperCase());
+                    switch(com)
+                    {
+                        case EXIT:
+                            getNewIter = false;
+                            System.out.println("Выход из программы");
+                        break;
+                        case LIST:
+                            view.printAllStudents(model.getStudents());
+                        break;
+                        case DELETE:
+                            prevCommand = command;
+                            command = view.prompt("Введите номер студента от 0 до " + (this.bufferData.size()-1));
+                            
+                        break;
+                        default: 
+                            getNewIter = false;
+                            System.out.println("Выход из программы");
+                        break;
+                    }
+
+                    if (prevCommand.equals("DELETE")){
+                        try {
+                            Double.parseDouble(command);
+
+                            getNewIter = false;
+
+                            this.bufferData.remove(Integer.parseInt(command));
+
+                        } catch (NumberFormatException e) {
+                            getNewIter = false;
+                            System.out.println("Выход из программы");
+                        }
+
+                    }
+                }
+
+            catch (Exception e) {
+                getNewIter = false;
+                System.out.println("Выход из программы");
             }
+            
         }
     }
-
 }
