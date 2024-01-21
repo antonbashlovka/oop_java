@@ -1,15 +1,16 @@
 package task2_OCP;
 
 public class SpeedCalculation {
+
+    
+    /**
+     * Расчет допустимой скорости
+     * @param vehicle - принимает экземпляр Vehicle
+     * @return double MaxSpeed
+     */
     public double calculateAllowedSpeed(Vehicle vehicle) {
 
-        if (vehicle.getType().equalsIgnoreCase("Car")) {
-            return vehicle.getMaxSpeed() * 0.8;
-        } else if (vehicle.getType().equalsIgnoreCase("Bus")) {
-            return vehicle.getMaxSpeed() * 0.6;
-        }
-    
-        return 0.0;
+        return vehicle.getVal() * vehicle.getMaxSpeed();
     }
 }
 
