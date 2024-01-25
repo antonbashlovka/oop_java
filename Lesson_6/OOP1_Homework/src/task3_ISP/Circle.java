@@ -1,6 +1,6 @@
 package task3_ISP;
 
-public class Circle implements iShape {
+public class Circle implements iArea {
     private double radius;
 
     public Circle(double radius) {
@@ -11,9 +11,5 @@ public class Circle implements iShape {
     public double area() {
         return 2 * 3.14 * radius;
     }
-    
-    @Override
-    public double volume() {
-        throw new UnsupportedOperationException();
-    }
+
 }

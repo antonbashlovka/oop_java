@@ -1,6 +1,6 @@
 package task3_ISP;
 
-public class Cube implements iShape {
+public class Cube implements iVolume {
     
     private int edge;
     
@@ -8,10 +8,6 @@ public class Cube implements iShape {
         this.edge = edge;
     }
 
-    @Override
-    public double area() {
-        return 6 * edge * edge;
-    }
 
     @Override
     public double volume() {
