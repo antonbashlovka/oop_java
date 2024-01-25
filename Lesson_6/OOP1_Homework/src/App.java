@@ -7,6 +7,7 @@ import task1_SRP.*;
 import task2_OCP.*;
 import task3_ISP.*; 
 import task4_LSP.*;
+import task5_DIP.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -44,6 +45,11 @@ public class App {
         square.setEdge(3);
         System.out.println(square.area());
         System.out.println("--------------------------------------------");
+
+        //task 5 - dip - принцип инверсии зависимости
+        PetrolEngine pe = new PetrolEngine();
+        Auto auto = new Auto(pe);
+        auto.start();
 
 
     }
