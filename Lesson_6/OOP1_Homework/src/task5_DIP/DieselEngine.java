@@ -1,7 +1,7 @@
 package task5_DIP;
 
-public class PetrolEngine implements EngineType{ 
-    
+public class DieselEngine implements EngineType
+{
     @Override
     public void start() {
         System.out.println(this.type() + " " + "started");
@@ -9,7 +9,7 @@ public class PetrolEngine implements EngineType{
 
     @Override
     public String type() {
-        return "petrol engine";
+        return "diesel engine";
     }
     
 }

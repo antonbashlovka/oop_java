@@ -46,10 +46,16 @@ public class App {
         System.out.println(square.area());
         System.out.println("--------------------------------------------");
 
-        //task 5 - dip - принцип инверсии зависимости
+        //task 5 - dip - принцип инверсии зависимости - все зависимости должны быть направлены от более абстрактных к менее
         PetrolEngine pe = new PetrolEngine();
-        Auto auto = new Auto(pe);
-        auto.start();
+        DieselEngine de = new DieselEngine();
+
+        Auto petrol_auto = new Auto(pe);
+        Auto diesel_auto = new Auto(de);
+
+        petrol_auto.start();
+        diesel_auto.start();
+
 
 
     }

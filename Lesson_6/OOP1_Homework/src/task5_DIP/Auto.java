@@ -1,9 +1,13 @@
 package task5_DIP;
 
 public class Auto {
-    private PetrolEngine engine;
+    private EngineType engine;
 
-    public Auto(PetrolEngine engine) {
+    /**
+     * Конструктор авто - Принимает и сохраняет тип двигателя
+     * @param engine
+     */
+    public Auto(EngineType engine) {
         this.engine = engine;
     }
     
