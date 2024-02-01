@@ -14,7 +14,7 @@ public class App {
         Automobile auto2 = new Car("Lada_2112", 140, 200);
         System.out.println(auto2.allowedSpeed);
 
-
+        
 
     }
 }
