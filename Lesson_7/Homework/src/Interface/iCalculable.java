@@ -2,11 +2,12 @@ package Interface;
 
 public interface iCalculable {
 
-    iCalculable sum (int arg);
-    iCalculable multi (int arg);
-    iCalculable divide (int arg);
+    iCalculable save (int... args);
+    iCalculable sum (int... args);
+    iCalculable multi (int... args);
+    iCalculable divide (int... args);
 
-    int getResult();
+    void printResult();
 
     
 } 

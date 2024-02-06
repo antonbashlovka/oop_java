@@ -24,7 +24,12 @@ public class ViewCalculatorInt implements iCalcItem{
             calculator.sum(primaryArg);
             //iCalculable calculator = calculableFactory.create(primaryArg);
             while (true) {
-                String cmd = prompt("Введите команду (*, +, =) : ");
+                String cmd = prompt("Введите команду (*, +, /, =) : ");
+                if (cmd.equals("/")) {
+                    int arg = promptInt("Введите второй аргумент: ");
+                    calculator.divide(arg);
+                    continue;
+                }
                 if (cmd.equals("*")) {
                     int arg = promptInt("Введите второй аргумент: ");
                     calculator.multi(arg);
@@ -36,8 +41,7 @@ public class ViewCalculatorInt implements iCalcItem{
                     continue;
                 }
                 if (cmd.equals("=")) {
-                    int result = calculator.getResult();
-                    System.out.printf("Результат %d\n", result);
+                    calculator.printResult();
                     break;
                 }
             }

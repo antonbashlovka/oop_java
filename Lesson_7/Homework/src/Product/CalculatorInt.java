@@ -1,6 +1,5 @@
 package Product;
 
-
 import Interface.iCalculable;
 
 public final class CalculatorInt implements iCalculable{
@@ -11,26 +10,32 @@ public final class CalculatorInt implements iCalculable{
     }
 
     @Override
-    public iCalculable sum(int arg) {
-        primaryArg += arg;
+    public iCalculable save(int... args) {
+        primaryArg = args[0];
         return this;
     }
 
     @Override
-    public iCalculable multi(int arg) {
-        primaryArg *= arg;
+    public iCalculable sum(int... args) {
+        primaryArg += args[0];
         return this;
     }
 
     @Override
-    public iCalculable divide (int arg) {
-        primaryArg /= arg;
+    public iCalculable multi(int... args) {
+        primaryArg *= args[0];
         return this;
     }
 
     @Override
-    public int getResult() {
-        return this.primaryArg;
+    public iCalculable divide (int... args) {
+        primaryArg /= args[0];
+        return this;
+    }
+
+    @Override
+    public void printResult() {
+        System.out.println(this.primaryArg);
     }
 
 
