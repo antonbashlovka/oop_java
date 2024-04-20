@@ -13,10 +13,12 @@ public class App {
         //iCalcItem view = calcIntegers.createCalc();
 
 
-        CalcGenerator calcCompl = new CalcComplGenerator();
+       CalcGenerator calcCompl = new CalcComplGenerator();
         iCalcItem view = calcCompl.createCalc();
 
         view.open();
+
+
 
 
 

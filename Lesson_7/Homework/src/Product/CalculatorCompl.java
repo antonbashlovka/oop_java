@@ -19,7 +19,7 @@ public final class CalculatorCompl implements iCalculable{
         this.imgPart = parts[1];
 
         return this;
-    }
+    } 
 
     @Override
     public iCalculable sum(int... parts) {
