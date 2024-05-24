@@ -1,6 +1,10 @@
 package Inheritance_and_polymorphizm;
 
-public class Automobile {
+public class Automobile { 
+    
+    /*!!! Этот пример только для показа наследования, в жизни
+        для общего, примерного описания сущностей использовать АБСТРАКТНЫЙ класс !!!
+    */
 
     private String make;
 
