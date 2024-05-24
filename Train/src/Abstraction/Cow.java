@@ -30,7 +30,7 @@ public class Cow extends Animal{
     
     @Override
     public String say() {
-        return "moo!";
+        return "moo-o-o!";
     }
 
     @Override
