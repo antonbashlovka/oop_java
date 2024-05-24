@@ -23,9 +23,10 @@ public class App {
         auto2.printDescription(); // Метод переопределен в расширяющем классе Truck и выводит уже данные объекта Truck
         auto3.printDescription(); // Метод переопределен в расширяющем классе Bus и выводит уже данные объекта Bus
 
+        System.out.println("\n"+auto4.getMake()); //Мы можем из наследника открыть публичные и защищенные методы родителя, приватные не можем
         //System.out.println(auto3.getNumPassengers()); Из родительского посмотреть свойства наследников мы не можем
         System.out.println("\n"+auto4.getNumPassengers()); //Мы их можем из наследника и посмотреть
-        System.out.println("\n"+auto4.getMake()); //Мы можем из наследника открыть публичные и защищенные методы родителя, приватные не можем
+        
         
        
     }
