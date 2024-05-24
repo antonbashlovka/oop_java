@@ -25,19 +25,19 @@ public class Dog extends Animal{
 
 
     @Override // обязательно переопределяем т.к он есть в родительском абстрактном классе
-    public void eat() {
-        System.out.println("meat");
+    public String eat() {
+        return "meat";
     }
 
     @Override // обязательно переопределяем т.к он есть в родительском абстрактном классе
-    public void say() {
-        System.out.println("gaff!");
+    public String say() {
+        return "gaff!";
     }
 
     @Override
     public void describe(){
         super.describe();
-        System.out.println("Now I'm going to protect: " + this.protection + "; to attack: " + this.attack); 
+        System.out.println("Now I'm going to protect: " + this.protection + "; to attack: " + this.attack + ". I eat "+ eat() +" and I say you " + say()); 
     }
 
     /**

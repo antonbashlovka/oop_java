@@ -24,19 +24,19 @@ public class Cow extends Animal{
     }
 
     @Override
-    public void eat() {
-        System.out.println("hay");
+    public String eat() {
+        return "hay";
     }
     
     @Override
-    public void say() {
-        System.out.println("moo!");
+    public String say() {
+        return "moo!";
     }
 
     @Override
     public void describe(){
         super.describe();
-        System.out.println("Now I'm going to give " + this.milkAmount + " liters of milk; my horns are : " + this.hornLength + " meters."); 
+        System.out.println("Now I'm going to give " + this.milkAmount + " liters of milk; my horns are " + this.hornLength + " meters. I eat "+ eat() +" and I say you " + say()); 
     }
 
     public int getMilk() {

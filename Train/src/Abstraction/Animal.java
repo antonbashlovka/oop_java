@@ -34,12 +34,12 @@ public abstract class Animal {
      * они общие для наследников, не имеют тела и 
      * предназначены для переопределения в классах-наследниках
      */
-    public abstract void eat();
+    public abstract String eat();
 
-    public abstract void say();
+    public abstract String say();
 
     public void describe(){
-        System.out.println("Hello, I'm a " + this.color + " " + this.kind + " and I have " + this.numLegs + " legs.");
+        System.out.println("\nHello, I'm a " + this.color + " " + this.kind + " and I have " + this.numLegs + " legs.");
     }
 
 
