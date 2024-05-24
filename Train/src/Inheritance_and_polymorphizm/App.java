@@ -1,4 +1,4 @@
-package Inheritance;
+package Inheritance_and_polymorphizm;
 
 /*
  * Наследование применяется чтобы объединить общие признаки разных классов в один родительский класс

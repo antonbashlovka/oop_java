@@ -1,4 +1,4 @@
-package Inheritance;
+package Inheritance_and_polymorphizm;
 
 public class Automobile {
 
