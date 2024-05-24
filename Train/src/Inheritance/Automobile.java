@@ -4,14 +4,19 @@ public class Automobile {
 
     private String make;
 
-    private String model;
+    private String model; // Поля мы всегда защищаем приватом, чтобы никто не менял их значения напрямую
 
+    /**
+     * Конструктор принимает 
+     * @param make
+     * @param model
+     */
     public Automobile(String make, String model) {
-        this.make = make;
-        this.model = model;
+        this.setMake(make);
+        this.setModel(model);
     }
 
-    public String getMake() {
+    protected String getMake() {
         return make;
     }
 
@@ -27,6 +32,9 @@ public class Automobile {
         this.model = model;
     }
 
-    
+    public void printDescription(){
+        System.out.println("\nAutomobile is " + "make " + this.make
+            + " model " + this.model + ". ");
+    }
     
 }

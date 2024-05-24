@@ -6,7 +6,7 @@ public class Truck extends Automobile{
 
     public Truck(String make, String model, int loadWeight) {
         super(make, model);
-        this.loadWeight = loadWeight;
+        this.setLoadWeight(loadWeight);
     }
 
     public int getLoadWeight() {
@@ -17,6 +17,10 @@ public class Truck extends Automobile{
         this.loadWeight = loadWeight;
     }
 
-    
+    @Override
+    public void printDescription(){
+        super.printDescription();
+        System.out.println("This automobile can be loaded for " + loadWeight + " tons.");
+    }
 
 }

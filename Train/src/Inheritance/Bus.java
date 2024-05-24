@@ -6,7 +6,7 @@ public class Bus extends Automobile{
 
     public Bus(String make, String model, int numPassengers) {
         super(make, model);
-        this.numPassengers = numPassengers;
+        this.setNumPassengers(numPassengers);
     }
 
     public int getNumPassengers() {
@@ -17,6 +17,10 @@ public class Bus extends Automobile{
         this.numPassengers = numPassengers;
     }
 
-    
+    @Override
+    public void printDescription(){
+        super.printDescription();
+        System.out.println("This automobile can take " + numPassengers + " passengers.");
+    }
     
 }
